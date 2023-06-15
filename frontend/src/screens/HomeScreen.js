@@ -1,8 +1,8 @@
 import data from '../data.js';
 
 const HomeScreen = {
-  const { products } = data;
   render: () =>{
+    const { products } = data;
     return `
       <ul class="products">
         ${products.map( product => `
@@ -24,7 +24,9 @@ const HomeScreen = {
             </div>
           </div>
         </li>
-        `)}
+        `).join('\n')}
     `
   }
 }
+
+export default HomeScreen;
